@@ -67,24 +67,28 @@
       });
 
       async function getImage() {
-        // const url = 'http://localhost:8000/api/rgb_get'
-        const url = 'http://44.206.255.237:8000/admin/login/?next=/admin/'
+        const url = 'http://44.206.255.237:8000/api/rgb_get'
+        // const url = 'http://44.206.255.237:8000/admin/login/?next=/admin/'
         // const url = 'example.com'
-        let  response = await fetch(url, {
-          headers: {
-            ['Access-Control-Allow-Origin']: '*',
-            ['Access-Control-Allow-Origin']: '*',
-            ['access-control-allow-origin']: 'http://localhost:8080',
-            ['access-control-allow-origin']: 'http://127.0.0.1:8080',
-          }
-        });
+        let  response = await fetch(url);
+        // let  response = await fetch(url, {
+        //   headers: {
+        //     ['Access-Control-Allow-Origin']: '*',
+        //     ['Access-Control-Allow-Origin']: '*',
+        //     ['access-control-allow-origin']: 'http://localhost:8080',
+        //     ['access-control-allow-origin']: 'http://127.0.0.1:8080',
+        //   }
+        // });
 
         if (response.ok) { // если HTTP-статус в диапазоне 200-299
           // получаем тело ответа (см. про этот метод ниже)
-          let json = await response.json();
+          let respo = await response.json();
+          console.log('response :>> ', response);
+          // console.log('json.value :>> ', json.value.data);
         } else {
           alert("Ошибка HTTP: " + response.status);
         }
+
       }
 
       async function getImage2() {
@@ -114,7 +118,7 @@
       }
 
       async function getImage3() {
-        json.value = await client.get('/admin/login/?next=/admin/')
+        json.value = await client.get('/api/rgb_get')
         console.log('json.value :>> ', json.value.data);
 
       }
@@ -131,7 +135,7 @@
 
       // getImage()
       // getImage2()
-      // getImage3()
+      getImage3()
       // performSignIn()
       // console.log('json.value :>> ', json.value);
       

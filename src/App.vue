@@ -11,6 +11,57 @@
             class="sidebar__logo"
             src="@/assets/junonian-logo.png"
           >
+
+          <div
+            class="sidebar__items"
+          >
+            <div
+              class="sidebar__item"
+            >
+              <div
+                class="sidebar__icon"
+              >
+                <img src="@/assets/icons/game.svg">
+              </div>
+              <div
+                class="sidebar__text"
+              >
+                Posters
+              </div>
+            </div>
+            <div
+              class="sidebar__item"
+            >
+              <div
+                class="sidebar__icon"
+              >
+                <img src="@/assets/icons/about.svg">
+              </div>
+              <div
+                class="sidebar__text"
+              >
+                About
+              </div>
+            </div>
+            <div
+              class="sidebar__item"
+            >
+              <div
+                class="sidebar__icon"
+              >
+                <img src="@/assets/icons/nasa-photo.svg">
+              </div>
+              <div
+                class="sidebar__text"
+              >
+                NASA Photo
+              </div>
+            </div>
+            <div
+              class="divider"
+              style="width: 127px"
+            />
+          </div>
         </div>
         <div
           class="main-part"
@@ -28,7 +79,7 @@
             </div>
 
             <p class="header__poster-size">Poster А2 42x59.4 sm</p>
-            
+
             <div class="header__notifications">
               <div class="notifications__box">
                 <svg class="notifications__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -108,6 +159,32 @@ export default {
     width: 127px;
     margin-top: 32px;
     margin-left: 37px;
+  }
+
+  .sidebar__items {
+    display: flex;
+    flex-direction: column;
+    margin-top: 78px;
+    margin-left: 40px;
+  }
+
+  .sidebar__item {
+    display: flex;
+    margin-bottom: 20px;
+  }
+
+  .sidebar__icon {
+
+  }
+
+  .sidebar__text {
+    margin-left: 18px;
+  }
+
+  .divider {
+    height: 1px;
+    background: #E4E4E4;
+    opacity: 0.1;
   }
 
   .main-part {
