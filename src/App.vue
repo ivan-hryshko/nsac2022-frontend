@@ -167,6 +167,7 @@ export default {
     justify-content: space-between;
     align-items: center;
     padding: 0 64px;
+    box-shadow: inset 0px -1px 0px rgba(228, 228, 228, 0.1);
   }
 
   .header__download-item{
