@@ -10,16 +10,15 @@
         <div class="btn btn-border"><h5 class="btn__text"> Preview</h5></div>
       </div>
     </div>
-    <v-btn
-      color="#702DFF"
+    <div
+      class="gallery"
     >
-      <router-link to="/choose-color">
-        Use
-      </router-link>
-      
-    </v-btn>
-      main - first page
-    
+      <SpaceImage
+        v-for="image, index in 12"
+        :key="index"
+      />
+
+    </div>
   </div>
 </template>
 
@@ -27,12 +26,13 @@
   import { ref } from 'vue'
   import dataset from '@/assets/DataSet/13639-Metadata.json'
   import axios from 'axios'
+  import SpaceImage from '@/components/space-image'
 
   export default {
     name: 'ChoosePicture',
 
     components: {
-      
+      SpaceImage,
     },
     setup() {
       const json = ref([])
@@ -182,6 +182,13 @@
 
   .slider-wrapped {
 
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 20px;
+    column-gap: 40px;
   }
 
   .image {
