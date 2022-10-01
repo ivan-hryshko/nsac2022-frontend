@@ -25,13 +25,17 @@
 </template>
 
 <script>
+import { useRouter, useRoute } from 'vue-router'
 
 export default {
   name: 'App',
-
   data: () => ({
     //
   }),
+  setup() {
+    const router = useRouter()
+    const route = useRoute()
+  }
 };
 </script>
 
@@ -54,6 +58,10 @@ export default {
   .main-part {
     display: flex;
     flex-direction: column;
+  }
+
+  router-link {
+    color:white;
   }
 
 </style>

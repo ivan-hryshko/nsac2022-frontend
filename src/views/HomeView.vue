@@ -5,7 +5,14 @@
   <div
     class=""
   >
-    main
+  <v-btn
+    color="#702DFF"
+  >
+    <router-link to="/choose-color">
+      Use
+    </router-link>
+  </v-btn>
+    main - first page
     <!-- <v-slider
       class="align-self-stretch"
       min="200"
@@ -124,7 +131,7 @@
 
       // getImage()
       // getImage2()
-      getImage3()
+      // getImage3()
       // performSignIn()
       // console.log('json.value :>> ', json.value);
       
