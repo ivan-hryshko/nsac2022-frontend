@@ -6,7 +6,7 @@
       <h2 class="header-title">Step 2. Color</h2>
       <div class="header-btns">
         <div class="link-button">
-          <router-link to="#" >
+          <router-link to="/" >
             Back
           </router-link>
         </div>
