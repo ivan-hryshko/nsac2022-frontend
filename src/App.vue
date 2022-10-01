@@ -11,6 +11,18 @@
             class="sidebar__logo"
             src="@/assets/junonian-logo.png"
           >
+
+          <div
+            class="sidebar__items"
+          >
+            <div
+              class="sidebar__item"
+            >
+              <img src="@/assets/icons/game.svg" alt="">
+
+            </div>
+
+          </div>
         </div>
         <div
           class="main-part"
@@ -28,7 +40,7 @@
             </div>
 
             <p class="header__poster-size">Poster А2 42x59.4 sm</p>
-            
+
             <div class="header__notifications">
               <div class="notifications__box">
                 <svg class="notifications__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -104,6 +116,15 @@ export default {
     width: 127px;
     margin-top: 44px;
     margin-left: 37px;
+  }
+
+  .sidebar__items {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sidebar__item {
+    width: 127px;
   }
 
   .main-part {
