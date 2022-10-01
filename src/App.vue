@@ -220,6 +220,10 @@ export default {
     line-height: 16px;
   }
 
+  main{
+    width: 100%;
+  }
+
   router-link {
     color:white;
   }
