@@ -1,6 +1,6 @@
 <template>
   <div
-    class="layout-2"
+    class="main-content"
   >
 
     <div class="content__header">
@@ -10,7 +10,6 @@
         <div class="btn btn-border"><h5 class="btn__text"> Preview</h5></div>
       </div>
     </div>
-
     <v-btn
       color="#702DFF"
     >
@@ -26,7 +25,6 @@
 
 <script>
   import { ref } from 'vue'
-  import HelloWorld from '../components/HelloWorld'
   import dataset from '@/assets/DataSet/13639-Metadata.json'
   import axios from 'axios'
 
@@ -34,7 +32,7 @@
     name: 'ChoosePicture',
 
     components: {
-      HelloWorld,
+      
     },
     setup() {
       const json = ref([])
@@ -136,7 +134,7 @@
 </script>
 
 <style>
-.layout-2 {
+.main-content {
     /* width: 100%; */
     margin: 0 64px;
     display: flex;
