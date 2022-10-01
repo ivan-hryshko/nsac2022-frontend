@@ -172,30 +172,29 @@
     border: 1px solid #702DFF;
     background-color: #702DFF;
     margin-left: 8px;
+    cursor: pointer;
   }
 
-    .btn-background:link {
-      border: 1px solid #702DFF;
-      background-color: #702DFF;
-    }
+  .btn-background:link {
+    border: 1px solid #702DFF;
+    background-color: #702DFF;
+  }
 
-    /* visited link */
-    .btn-background:visited {
-      border: 1px solid #702DFF;
-      background-color: #702DFF;
-    }
+  .btn-background:visited {
+    border: 1px solid #702DFF;
+    background-color: #702DFF;
+  }
 
-    /* mouse over link */
-    .btn-background:hover {
-      border: 1px solid #5c2bc6;
-      background-color: #5c2bc6;
-    }
+  .btn-background:hover {
+    border: 1px solid #5c2bc6;
+    background-color: #5c2bc6;
+    transition: all .3s;
+  }
 
-    /* selected link */
-    .btn-background:active {
-      border: 1px solid #702DFF;
-      background-color: #702DFF;
-    }
+  .btn-background:active {
+    border: 1px solid #702DFF;
+    background-color: #702DFF;
+  }
 
   .link-button{
     color: white;

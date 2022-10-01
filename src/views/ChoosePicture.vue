@@ -176,7 +176,7 @@
     border: 1px solid #702DFF;
   }
 
-  .header-btns > .btn-border {
+  .content__header .btn-border {
     margin-left: 8px;
   }
 
