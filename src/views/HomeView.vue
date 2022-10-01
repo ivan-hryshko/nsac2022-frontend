@@ -49,9 +49,25 @@
     setup() {
       const json = ref([])
 
+      // const url = 'http://localhost:8000/api/'
+      const url = 'https://www.random.org/'
+      // const url = ''
+      const client = axios.create({
+        baseURL: url,
+        timeout: 1000,
+      });
+
       async function getImage() {
         const url = 'http://localhost:8000/api/rgb_get'
-        let  response = await fetch(url);
+        // const url = 'example.com'
+        let  response = await fetch(url, {
+          headers: {
+            ['Access-Control-Allow-Origin']: '*',
+            ['Access-Control-Allow-Origin']: '*',
+            ['access-control-allow-origin']: 'http://localhost:8080',
+            ['access-control-allow-origin']: 'http://127.0.0.1:8080',
+          }
+        });
 
         if (response.ok) { // если HTTP-статус в диапазоне 200-299
           // получаем тело ответа (см. про этот метод ниже)
@@ -62,7 +78,7 @@
       }
 
       async function getImage2() {
-        const url = 'localhost:8000/api/rgb_get'
+        const url = 'example.com'
         axios
         .get(url)
         .then(response => (json.value = response));
@@ -73,7 +89,7 @@
       
         let headers = new Headers();
 
-        headers.append('Access-Control-Allow-Origin', 'http://localhost:8081');
+        headers.append('Access-Control-Allow-Origin', '*')
         headers.append('Access-Control-Allow-Credentials', 'true');
 
         fetch(url, {
@@ -87,9 +103,33 @@
           .catch(error => console.log(error.message));
       }
 
+      async function getImage3() {
+        json.value = await client.get('/integers/?num=10&min=1&max=6&col=1&base=10&format=plain&rnd=new')
+        console.log('json.value :>> ', json.value.data);
+
+      }
+
+      // const express = require('express')
+      // const app = express()
+
+      // const cors = express('cors')
+
+      // app.use(cors())
+      // app.get('/', (req, res) => {
+      //   res.status(200).json({ title: 'Hello worl'})
+      // })
+
       getImage()
-      console.log('json.value :>> ', json.value);
-      performSignIn()
+      // getImage2()
+      // getImage3()
+      // performSignIn()
+      // console.log('json.value :>> ', json.value);
+      
+      // client.get('/rgb_get')
+
+      
+
+
       return {
         dataset
       }
