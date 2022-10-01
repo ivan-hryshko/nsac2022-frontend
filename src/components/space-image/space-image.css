@@ -1,0 +1,10 @@
+.space-image {
+  background: #242731;
+  border-radius: 40px;
+  width: 340px;
+  height: 438px;
+}
+
+.space-image {
+  display: flex;
+}
