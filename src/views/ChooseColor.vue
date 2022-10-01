@@ -1,6 +1,6 @@
 <template>
   <div
-  class="main-content"
+    class="main-content"
   >
     <div class="content__header">
       <h2 class="header-title">Step 2. Color</h2>
@@ -11,7 +11,7 @@
           </router-link>
         </div>
         <div class="link-button btn-background">
-          <router-link to="#">
+          <router-link to="/choose-meta-data">
             Next
           </router-link>
         </div>

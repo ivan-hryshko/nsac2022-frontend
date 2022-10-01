@@ -2,6 +2,9 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import ChoosePicture from '../views/ChoosePicture.vue'
 import ChooseColor from '@/views/ChooseColor.vue'
+import ChooseMetaData from '@/views/ChooseMetaData.vue'
+import PrintSetting from '@/views/PrintSetting.vue'
+import SuccessPage from '@/views/SuccessPage.vue'
 
 Vue.use(VueRouter)
 
@@ -23,6 +26,21 @@ const routes = [
     path: '/choose-color',
     name: 'choose-color',
     component: ChooseColor
+  },
+  {
+    path: '/choose-meta-data',
+    name: 'choose-meta-data',
+    component: ChooseMetaData
+  },
+  {
+    path: '/print-setting',
+    name: 'print-setting',
+    component: PrintSetting
+  },
+  {
+    path: '/success-page',
+    name: 'success-page',
+    component: SuccessPage
   }
 ]
 
