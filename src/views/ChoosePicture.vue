@@ -11,8 +11,13 @@
     <router-link to="/choose-color">
       Use
     </router-link>
+    
   </v-btn>
     main - first page
+    <img
+      style="width: 500px"
+      src="http://44.206.255.237:8000/media/rgb_images/JNCE_2022229_44C00074_V01-blue.png"
+    >
     <!-- <v-slider
       class="align-self-stretch"
       min="200"
@@ -50,7 +55,7 @@
   import axios from 'axios'
 
   export default {
-    name: 'Home',
+    name: 'ChoosePicture',
 
     components: {
       HelloWorld,
@@ -135,7 +140,7 @@
 
       // getImage()
       // getImage2()
-      getImage3()
+      // getImage3()
       // performSignIn()
       // console.log('json.value :>> ', json.value);
       
