@@ -9,8 +9,15 @@
         >
           Junonian
         </div>
-        <div>
-          <router-view/>
+        <div
+          class="main-part"
+        >
+          <header>
+            header
+          </header>
+          <main>
+            <router-view/>
+          </main>
         </div>
       </div>
     </v-main>
@@ -29,16 +36,24 @@ export default {
 </script>
 
 <style>
-  .layout {
+.layout {
     width: 100%;
     display: flex;
     background-color: #1E1E1E;
     height: 100%;
+    color: white;
 
   }
+
   .sidebar {
     width: 256px;
     box-shadow: inset -1px 0px 0px rgba(228, 228, 228, 0.1);
     color: #808191;
   }
+
+  .main-part {
+    display: flex;
+    flex-direction: column;
+  }
+
 </style>

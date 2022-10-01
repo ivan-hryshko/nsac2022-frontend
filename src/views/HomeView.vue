@@ -5,6 +5,7 @@
   <div
     class=""
   >
+    main
     <!-- <v-slider
       class="align-self-stretch"
       min="200"
@@ -149,7 +150,7 @@
     align-items: center;
   }
 
-  .slider-wraooed {
+  .slider-wrapped {
 
   }
 
