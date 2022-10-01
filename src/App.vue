@@ -41,7 +41,7 @@
                 </svg>
 
                 <div class="notifications__counter">
-                  <p>2</p>
+                  <p class="counter-number">2</p>
                 </div>
               </div>
 
@@ -85,6 +85,10 @@ export default {
 </script>
 
 <style>
+.v-application p{
+    margin-bottom: 0;
+  }
+  
 .layout {
     width: 100%;
     display: flex;
@@ -102,7 +106,7 @@ export default {
 
   .sidebar__logo {
     width: 127px;
-    margin-top: 44px;
+    margin-top: 32px;
     margin-left: 37px;
   }
 
@@ -117,21 +121,60 @@ export default {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 0 64px;
   }
 
   .header__download-item{
+    display: flex;
+  }
 
+  .download-item__text{
+    margin-left: 16px;
+    /* font-family: 'Inter'; */
+    font-weight: 600;
+    font-size: 14px;
+    color: #808191;
   }
 
   .header__poster-size{
-    
+    font-weight: 500;
+    font-size: 18px;
   }
 
   .header__notifications{
-
+    display: flex;
+    align-items: center;
   }
+
+  .notifications__box{
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 80px;
+    position: relative;
+  }
+
+  .notifications__counter{
+    width: 16px;
+    height: 16px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .counter-number{
+    font-weight: 500;
+    font-size: 12px;
+    text-align: center;
+    margin: 0;
+  }
+
   router-link {
     color:white;
   }
-
 </style>
