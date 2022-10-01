@@ -5,7 +5,14 @@
   <div
     class=""
   >
-    main
+  <v-btn
+    color="#702DFF"
+  >
+    <router-link to="/choose-color">
+      Use
+    </router-link>
+  </v-btn>
+    main - first page
     <!-- <v-slider
       class="align-self-stretch"
       min="200"
@@ -52,15 +59,16 @@
       const json = ref([])
 
       // const url = 'http://localhost:8000/api/'
-      const url = 'https://www.random.org/'
-      // const url = ''
+      // const url = 'https://www.random.org/'
+      const url = 'http://44.206.255.237:8000/'
       const client = axios.create({
         baseURL: url,
         timeout: 1000,
       });
 
       async function getImage() {
-        const url = 'http://localhost:8000/api/rgb_get'
+        // const url = 'http://localhost:8000/api/rgb_get'
+        const url = 'http://44.206.255.237:8000/admin/login/?next=/admin/'
         // const url = 'example.com'
         let  response = await fetch(url, {
           headers: {
@@ -106,7 +114,7 @@
       }
 
       async function getImage3() {
-        json.value = await client.get('/integers/?num=10&min=1&max=6&col=1&base=10&format=plain&rnd=new')
+        json.value = await client.get('/admin/login/?next=/admin/')
         console.log('json.value :>> ', json.value.data);
 
       }

@@ -7,7 +7,10 @@
         <div
           class="sidebar"
         >
-          Junonian
+          <img
+            class="sidebar__logo"
+            src="@/assets/junonian-logo.png"
+          >
         </div>
         <div
           class="main-part"
@@ -67,13 +70,17 @@
 </template>
 
 <script>
+// import { useRouter, useRoute } from 'vue-router'
 
 export default {
   name: 'App',
-
   data: () => ({
     //
   }),
+  setup() {
+    // const router = useRouter()
+    // const route = useRoute()
+  }
 };
 </script>
 
@@ -91,6 +98,12 @@ export default {
     width: 256px;
     box-shadow: inset -1px 0px 0px rgba(228, 228, 228, 0.1);
     color: #808191;
+  }
+
+  .sidebar__logo {
+    width: 127px;
+    margin-top: 44px;
+    margin-left: 37px;
   }
 
   .main-part {
@@ -117,4 +130,8 @@ export default {
   .header__notifications{
 
   }
+  router-link {
+    color:white;
+  }
+
 </style>
