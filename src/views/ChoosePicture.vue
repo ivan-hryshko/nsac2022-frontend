@@ -2,50 +2,26 @@
   <div
     class="layout-2"
   >
-  <div
-    class=""
-  >
-  <v-btn
-    color="#702DFF"
-  >
-    <router-link to="/choose-color">
-      Use
-    </router-link>
-    
-  </v-btn>
-    main - first page
-    <img
-      style="width: 500px"
-      src="http://44.206.255.237:8000/media/rgb_images/JNCE_2022229_44C00074_V01-blue.png"
-    >
-    <!-- <v-slider
-      class="align-self-stretch"
-      min="200"
-      max="900"
-      step="1"
-    ></v-slider> -->
-  <!-- </div>
-    <div class="d-flex flex-column justify-space-between align-center">
 
-      <v-img
-        :aspect-ratio="16/9"
-        :width="width"
-        src="@/assets/ImageSet/JNCE_2022229_44C00074_V01-blue.png"
-      ></v-img>
-    </div> -->
-    <!-- <div
-      v-for="data in dataset"
-      :key="data.FILE_NAME"
-    >
-    <v-btn>
-      {{ data }}
-    </v-btn> -->
-
-    
-
+    <div class="content__header">
+      <h2 class="header-title">Step 1. Angle</h2>
+      <div class="header-btns">
+        <div class="btn"><h5 class="btn__text"> Cancel</h5></div>
+        <div class="btn btn-border"><h5 class="btn__text"> Preview</h5></div>
+      </div>
     </div>
+
+    <v-btn
+      color="#702DFF"
+    >
+      <router-link to="/choose-color">
+        Use
+      </router-link>
+      
+    </v-btn>
+      main - first page
+    
   </div>
-  <!-- <hello-world /> -->
 </template>
 
 <script>
@@ -160,11 +136,50 @@
 </script>
 
 <style>
-  .layout-2 {
-    width: 100%;
+.layout-2 {
+    /* width: 100%; */
+    margin: 0 64px;
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  .content__header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 45px 0;
+  }
+
+  .header-title{
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 62px;
+  }
+
+  .header-btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .btn{
+    border-radius: 16px
+  }
+
+  .btn__text{
+    margin: 18px 43px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .btn-border{
+    border: 1px solid #702DFF;
+  }
+
+  .header-btns > .btn-border {
+    margin-left: 8px;
   }
 
   .slider-wrapped {
