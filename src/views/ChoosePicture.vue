@@ -10,6 +10,15 @@
         <div class="btn btn-border"><h5 class="btn__text"> Preview</h5></div>
       </div>
     </div>
+    <div
+      class="gallery"
+    >
+      <SpaceImage
+        v-for="image, index in 12"
+        :key="index"
+      />
+
+    </div>
 
     <v-btn
       color="#702DFF"
@@ -29,12 +38,14 @@
   import HelloWorld from '../components/HelloWorld'
   import dataset from '@/assets/DataSet/13639-Metadata.json'
   import axios from 'axios'
+  import SpaceImage from '@/components/space-image'
 
   export default {
     name: 'ChoosePicture',
 
     components: {
       HelloWorld,
+      SpaceImage,
     },
     setup() {
       const json = ref([])
@@ -184,6 +195,13 @@
 
   .slider-wrapped {
 
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 20px;
+    column-gap: 40px;
   }
 
   .image {
