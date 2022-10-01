@@ -2,6 +2,32 @@
   <div
     class="space-image"
   >
+    <div
+      class="space-image__image-wrapped"
+    >
+      <img
+        class="space-image__image"
+        src="@/assets/ImageSet/JNCE_2022229_44C00074_V01-mapprojected.png"
+      >
+    </div>
+    <div class="space-image__info">
+      <div class="space-image__text">
+        <div class="space-image__main-text">
+          {{ mainText }}
+        </div>
+        <div class="space-image__second-text">
+          {{ secondText }}
+
+        </div>
+      </div>
+      <v-btn
+        color="#702DFF"
+      >
+        <router-link to="/choose-color">
+          Use
+        </router-link>
+      </v-btn>
+    </div>
   </div>
 </template>
 
@@ -10,20 +36,23 @@
 export default {
   name: 'SpaceImage',
   props: {
-    position: {
+    mainText: {
       type: String,
-      default: 'left',
+      default: 'Europa — 13805',
     },
+    secondText: {
+      type: String,
+      default: 'NASA / SwRI / MSSS',
+    }
   },
   setup(props) {
-    const styleOptions = computed(() => {
-      return {
-        'background-position': props.position,
-      }
-    })
+    function HelloWorld() {
+      console.log('hello');
+      this.router.push({name: 'choose-color'})
+    }
 
     return {
-      styleOptions,
+      HelloWorld
     }
   },
 }

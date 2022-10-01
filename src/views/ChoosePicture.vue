@@ -19,17 +19,6 @@
       />
 
     </div>
-
-    <v-btn
-      color="#702DFF"
-    >
-      <router-link to="/choose-color">
-        Use
-      </router-link>
-      
-    </v-btn>
-      main - first page
-    
   </div>
 </template>
 
