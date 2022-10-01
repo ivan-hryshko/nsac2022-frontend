@@ -1,18 +1,17 @@
 <template>
   <div
-    class="layout"
+    class="layout-2"
   >
   <div
     class=""
   >
-    <v-slider
-      v-model="width"
+    <!-- <v-slider
       class="align-self-stretch"
       min="200"
       max="900"
       step="1"
-    ></v-slider>
-  </div>
+    ></v-slider> -->
+  <!-- </div>
     <div class="d-flex flex-column justify-space-between align-center">
 
       <v-img
@@ -20,14 +19,16 @@
         :width="width"
         src="@/assets/ImageSet/JNCE_2022229_44C00074_V01-blue.png"
       ></v-img>
-    </div>
-    <div
+    </div> -->
+    <!-- <div
       v-for="data in dataset"
       :key="data.FILE_NAME"
     >
     <v-btn>
       {{ data }}
-    </v-btn>
+    </v-btn> -->
+
+    
 
     </div>
   </div>
@@ -119,7 +120,7 @@
       //   res.status(200).json({ title: 'Hello worl'})
       // })
 
-      getImage()
+      // getImage()
       // getImage2()
       // getImage3()
       // performSignIn()
@@ -141,11 +142,15 @@
 </script>
 
 <style>
-  .layout {
+  .layout-2 {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  .slider-wraooed {
+
   }
 
   .image {
