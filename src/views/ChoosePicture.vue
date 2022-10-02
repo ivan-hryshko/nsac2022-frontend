@@ -80,7 +80,7 @@
       },
     },
     mounted() {
-      const url = 'https://44.202.137.22/api'
+      const url = 'https://junonian.earth/api'
       const client = axios.create({
         baseURL: url,
         timeout: 1000,
