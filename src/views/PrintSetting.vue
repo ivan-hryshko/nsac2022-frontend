@@ -58,7 +58,7 @@
           <!-- <div class="file-format-dropdown">PDF</div> -->
           <v-select :items="items" label="Format" solo :height="56"></v-select>
           <router-link to="/success-page">
-            <div class="link-button btn-background" style="height: 56px;">
+            <div class="link-button btn-background" style="height: 56px; padding: 0px;">
               Download poster for printing
             </div>
           </router-link>
