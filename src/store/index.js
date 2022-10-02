@@ -9,7 +9,8 @@ export default new Vuex.Store({
     fullDatas: [],
     chosenData: [],
     chosenImage: '',
-
+    targetRef: {},
+    resultPhoto: {},
   },
 
   mutations: {
@@ -22,6 +23,15 @@ export default new Vuex.Store({
     setChosenImage(state, payload) {
       state.chosenImage = payload
     },
+    setTargetElement(state, payload) {
+      state.targetRef = payload
+      console.log('save photo');
+    },
+    setResultPhoto(state, payload) {
+      console.log('payload :>> ', payload);
+      state.resultPhoto = payload
+      console.log('save photo');
+    },
   },
 
   getters: {
@@ -31,5 +41,12 @@ export default new Vuex.Store({
     getChosenData(state) {
       return state.chosenData
     },
+    getTargetElement(state) {
+      return state.targetRef
+    },
+    getResultPhoto(state) {
+      return state.resultPhoto
+    },
+
   }
 })

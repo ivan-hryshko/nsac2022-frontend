@@ -69,7 +69,7 @@
 
       // const url = 'http://localhost:8000/api/'
       // const url = 'https://www.random.org/'
-      const url = 'http://44.206.255.237:8000/api'
+      const url = 'http://44.202.137.22/api'
       const client = axios.create({
         baseURL: url,
         timeout: 1000,
@@ -111,7 +111,7 @@
         getCombinedList()
       }
 
-      // getRrquest()
+      getRrquest()
 
       return {
         dataset,
@@ -130,7 +130,7 @@
       ]),
     },
     mounted() {
-      this.saveFullData(this.fakeData)
+      // this.saveFullData(this.fullData)
       console.log('this.$store.state.fullDatas :>> ', this.$store.state.fullDatas);
 
     }
