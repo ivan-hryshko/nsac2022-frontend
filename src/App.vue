@@ -10,6 +10,7 @@
           <img
             class="sidebar__logo"
             src="@/assets/junonian-logo.png"
+            @click="$router.push({path: '/'})"
           >
 
           <div
@@ -228,6 +229,7 @@ html {
     width: 127px;
     margin-top: 44px;
     margin-left: 37px;
+    cursor: pointer;
   }
 
   .sidebar__items {

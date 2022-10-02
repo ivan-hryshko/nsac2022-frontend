@@ -17,6 +17,9 @@
         </router-link>
       </div>
     </div>
+
+    {{ $route.query }}
+    
     <div class="choose-colors">
       <div class="choose-colors__text">
         Choose color
@@ -109,7 +112,7 @@
         <img
           class="image-poster__image"
           src="@/assets/ImageSet/JNCE_2022229_44C00074_V01-mapprojected.png"
-          :src="require(`@/assets/ImageSet/${imagePath}`)"
+          :src="require(`@/assets/ImageSet/${$route.query.image}`)"
         >
       </div>
 
@@ -119,6 +122,7 @@
 
 <script>
   import { ref } from 'vue';
+  import { useRoute } from 'vue-router';
 
   export default {
     name: 'ChooseColor',
@@ -155,6 +159,8 @@
           imagePath.value = 'JNCE_2022229_44C00074_V01-mapprojected.png'
         }
       }
+
+      // console.log('this.$route.params :>> ', this.$route.query);
 
       return {
         colors,
