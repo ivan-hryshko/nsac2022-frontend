@@ -17,9 +17,6 @@
         </router-link>
       </div>
     </div>
-
-    {{ $route.query }}
-    
     <div class="choose-colors">
       <div class="choose-colors__text">
         Choose color
@@ -111,8 +108,7 @@
       <div class="image-poster__image-wrapped">
         <img
           class="image-poster__image"
-          src="@/assets/ImageSet/JNCE_2022229_44C00074_V01-mapprojected.png"
-          :src="require(`@/assets/ImageSet/${$route.query.image}`)"
+          :src="imagePath"
         >
       </div>
 
@@ -123,53 +119,69 @@
 <script>
   import { ref } from 'vue';
   import { useRoute } from 'vue-router';
+  import { mapMutations } from 'vuex'
 
   export default {
     name: 'ChooseColor',
     components: {
     },
     setup() {
-      const colors = ref({
+      // console.log('this.$route.params :>> ', this.$route.query);
+
+      return {
+      }
+    },
+    data: () => ({
+      colors: {
         isActiveRed: false,
         isActiveGreen: false,
         isActiveBlue: false,
         isActiveNormal: true,
-      })
-      const imagePath = ref('JNCE_2022229_44C00074_V01-mapprojected.png')
-
-      function changeActive(color) {
-        for (const key in colors.value) {
-          colors.value[key] = false
+      },
+      imagePath: 'https://www.missionjuno.swri.edu/Vault/VaultOutput?VaultID=44805&ts=1656511106',
+    }),
+    computed: {
+      chosenData () {
+        return this.$store.state.chosenData
+      }
+    },
+    methods: {
+      ...mapMutations([
+        'setChosenImage', // map `this.increment()` to `this.$store.commit('increment')`
+      ]),
+      changeActive(color) {
+        for (const key in this.colors) {
+          this.colors[key] = false
         }
 
         if (color === 'blue') {
-          colors.value.isActiveBlue = true
-          imagePath.value = 'JNCE_2022229_44C00074_V01-blue.png'
+          this.colors.isActiveBlue = true
+          this.imagePath = this.chosenData.image_b
+          this.setChosenImage(this.chosenData.image_b)
         }
         if (color === 'red') {
-          colors.value.isActiveRed = true
-          imagePath.value = 'JNCE_2022229_44C00074_V01-red.png'
+          this.colors.isActiveRed = true
+          this.imagePath = this.chosenData.image_r
+          this.setChosenImage(this.chosenData.image_r)
         }
         if (color === 'green') {
-          colors.value.isActiveGreen = true
-          imagePath.value = 'JNCE_2022229_44C00074_V01-green.png'
+          this.colors.isActiveGreen = true
+          this.imagePath = this.chosenData.image_g
+          this.setChosenImage(this.chosenData.image_g)
         }
         if (color === 'white') {
-          colors.value.isActiveNormal = true
-          imagePath.value = 'JNCE_2022229_44C00074_V01-mapprojected.png'
+          this.colors.isActiveNormal = true
+          this.imagePath = this.chosenData.image
+          this.setChosenImage(this.chosenData.image)
         }
       }
 
-      // console.log('this.$route.params :>> ', this.$route.query);
-
-      return {
-        colors,
-        imagePath,
-        changeActive,
-      }
     },
-    data: () => ({
-    }),
+    mounted() {
+      // console.log('this.$route.query :>> ', this.$route.query);
+      console.log('this.$store.state.stateHello :>> ', this.$store.state.helloState);
+
+    },
   }
 </script>
 

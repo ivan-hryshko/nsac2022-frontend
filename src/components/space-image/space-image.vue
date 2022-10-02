@@ -6,18 +6,16 @@
       class="space-image__image-wrapped"
     >
       <img
-        v-if="isRealData"
         class="space-image__image"
         :src="imageItem.image"
       >
-      <img
+      <!-- <img
         v-else
         class="space-image__image"
         :src="require(`@/assets/ImageSet/${imageItem.image}`)"
-      >
+      > -->
     </div>
     <div class="space-image__info"
-      @click="$router.push({path: '/choose-color', params: {hello: 'hello'}, query: imageItem})"
     >
       <div class="space-image__text">
         <div class="space-image__main-text">
@@ -27,16 +25,18 @@
           {{ secondText }}
         </div>
       </div>
-      <router-link to="/choose-color">
-        <div class="space-image__button">
+        <div
+          class="space-image__button"
+          @click="choseImage"
+        >
           Use
         </div>
-      </router-link>
     </div>
   </div>
 </template>
 
 <script>
+  import { mapMutations } from 'vuex'
 
 export default {
   name: 'SpaceImage',
@@ -77,6 +77,17 @@ export default {
     return {
       HelloWorld
     }
+  },
+  methods: {
+    ...mapMutations([
+      'setChosenData', // map `this.increment()` to `this.$store.commit('increment')`
+    ]),
+    choseImage() {
+      this.setChosenData(this.imageItem)
+      this.$router.push({path: '/choose-color'})
+      console.log('this.$store.state.chosenData :>> ', this.$store.state.chosenData);
+
+    },
   },
 }
 </script>

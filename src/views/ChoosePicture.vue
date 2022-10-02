@@ -39,6 +39,7 @@
   import dataset from '@/assets/DataSet/13639-Metadata.json'
   import axios from 'axios'
   import SpaceImage from '@/components/space-image'
+  import { mapMutations } from 'vuex'
 
   export default {
     name: 'ChoosePicture',
@@ -52,10 +53,10 @@
       const isRealData = ref(false)
       const fakeData = ref([])
       fakeData.value.push({
-        image: 'JNCE_2022229_44C00074_V01-mapprojected.png',
-        image_r: 'JNCE_2022229_44C00074_V01-red.png',
-        image_g: 'JNCE_2022229_44C00074_V01-green.png',
-        image_b: 'JNCE_2022229_44C00074_V01-blue.png',
+        image: 'https://www.missionjuno.swri.edu/Vault/VaultOutput?VaultID=44805&ts=1656511106',
+        image_r: 'https://d2xkkdgjnsfvb0.cloudfront.net/Vault/Thumb?VaultID=44763&Interlaced=1&Mode=R&ResX=960&OutputFormat=jpg&Quality=90&ts=1656511106',
+        image_g: 'https://d2xkkdgjnsfvb0.cloudfront.net/Vault/Thumb?VaultID=44665&Interlaced=1&Mode=R&ResX=960&OutputFormat=jpg&Quality=90&ts=1656511106',
+        image_b: 'https://www.missionjuno.swri.edu/Vault/VaultOutput?VaultID=44805&ts=1656511106',
         metadata: dataset
       })
 
@@ -123,6 +124,16 @@
     data: () => ({
       width: 900,
     }),
+    methods: {
+      ...mapMutations([
+        'saveFullData', // map `this.increment()` to `this.$store.commit('increment')`
+      ]),
+    },
+    mounted() {
+      this.saveFullData(this.fakeData)
+      console.log('this.$store.state.fullDatas :>> ', this.$store.state.fullDatas);
+
+    }
   }
 </script>
 
