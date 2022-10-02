@@ -7,15 +7,21 @@
     <div class="media-buttons">
       <div class="post__button">
         <img src="@/assets/icons/facebook.svg">
-        <h5 class="post__text">Post to facebook</h5>
+        <router-link class="post__text" to="/" >
+          Post to facebook
+        </router-link>
       </div>
       <div class="post__button">
         <img src="@/assets/icons/instagram.svg">
-        <h5 class="post__text">Post to instagram</h5>
+        <router-link class="post__text" to="/" >
+          Post to instagram
+        </router-link>
       </div>
       <div class="post__button">
         <img src="@/assets/icons/twitter.svg">
-        <h5 class="post__text">Post to twitter</h5>
+        <router-link class="post__text" to="/" >
+          Post to twitter
+        </router-link>
       </div>
     </div>
   </div>
