@@ -87,8 +87,8 @@
   }
 
   .carousel-3d-slide {
-    background-color: transparent;
-    border-color: transparent;
+    background-color: transparent !important;
+    border-color: transparent !important;
   }
 
 </style>
