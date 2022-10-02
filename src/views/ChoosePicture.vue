@@ -2,7 +2,6 @@
   <div
     class="main-content"
   >
-
     <div class="content__header">
       <h2 class="header-title">Step 1. Angle</h2>
       <div class="header-btns">
@@ -11,19 +10,32 @@
       </div>
     </div>
     <div
+      v-if="isRealData"
       class="gallery"
     >
       <SpaceImage
-        v-for="image, index in 12"
+        v-for="item, index in fullData"
         :key="index"
+        :image-item="item"
+        :is-real-data="isRealData"
       />
-
+    </div>
+    <div
+      v-else
+      class="gallery"
+    >
+      <SpaceImage
+        v-for="item, index in fakeData"
+        :key="index"
+        :image-item="item"
+        :is-real-data="isRealData"
+      />
     </div>
   </div>
 </template>
 
 <script>
-  import { ref } from 'vue'
+  import { ref, computed } from 'vue'
   import dataset from '@/assets/DataSet/13639-Metadata.json'
   import axios from 'axios'
   import SpaceImage from '@/components/space-image'
@@ -35,96 +47,77 @@
       SpaceImage,
     },
     setup() {
-      const json = ref([])
+      const imageList = ref([])
+      const combinedList = ref([])
+      const isRealData = ref(false)
+      const fakeData = ref([])
+      fakeData.value.push({
+        image: 'JNCE_2022229_44C00074_V01-mapprojected.png',
+        image_r: 'JNCE_2022229_44C00074_V01-red.png',
+        image_g: 'JNCE_2022229_44C00074_V01-green.png',
+        image_b: 'JNCE_2022229_44C00074_V01-blue.png',
+        metadata: dataset
+      })
+
+      for (let index = 0; index < 10; index++) {
+        fakeData.value.push(fakeData.value[0])
+      }
+
+      console.log('fakeData.value :>> ', fakeData.value);
+
 
       // const url = 'http://localhost:8000/api/'
       // const url = 'https://www.random.org/'
-      const url = 'http://44.206.255.237:8000/'
+      const url = 'http://44.206.255.237:8000/api'
       const client = axios.create({
         baseURL: url,
         timeout: 1000,
       });
 
-      async function getImage() {
-        const url = 'http://44.206.255.237:8000/api/rgb_get'
-        // const url = 'http://44.206.255.237:8000/admin/login/?next=/admin/'
-        // const url = 'example.com'
-        let  response = await fetch(url);
-        // let  response = await fetch(url, {
-        //   headers: {
-        //     ['Access-Control-Allow-Origin']: '*',
-        //     ['Access-Control-Allow-Origin']: '*',
-        //     ['access-control-allow-origin']: 'http://localhost:8080',
-        //     ['access-control-allow-origin']: 'http://127.0.0.1:8080',
-        //   }
-        // });
-
-        if (response.ok) { // если HTTP-статус в диапазоне 200-299
-          // получаем тело ответа (см. про этот метод ниже)
-          let respo = await response.json();
-          console.log('response :>> ', response);
-          // console.log('json.value :>> ', json.value.data);
-        } else {
-          alert("Ошибка HTTP: " + response.status);
+      const fullData = computed(() => {
+        let newArray = []
+        newArray = combinedList.value.slice()
+        for (const combinedItem of newArray) {
+          for (const imageGroup of imageList.value) {
+            if (imageGroup.id === combinedItem.from_images)
+            combinedItem.metadata = imageGroup.metadata
+            combinedItem.image_b = imageGroup.image_b
+            combinedItem.image_g = imageGroup.image_g
+            combinedItem.image_r = imageGroup.image_r
+          }
+          // combinedItem.from_images
         }
+        console.log('newArray :>> ', newArray);
+        return newArray
+      })
 
+      async function getImageList() {
+        imageList.value = await client.get('/rgb_list')
+        imageList.value = imageList.value.data
+        console.log('imageList.value :>> ', imageList.value);
       }
 
-      async function getImage2() {
-        const url = 'example.com'
-        axios
-        .get(url)
-        .then(response => (json.value = response));
+      async function getCombinedList() {
+        combinedList.value = await client.get('/combined_list')
+        combinedList.value = combinedList.value.data
+        console.log('combinedList.value :>> ', combinedList.value);
       }
 
-      function performSignIn() {
-        const url = 'http://localhost:8000/api/rgb_get'
-      
-        let headers = new Headers();
+      function getRrquest() {
+        isRealData.value = true
 
-        headers.append('Access-Control-Allow-Origin', '*')
-        headers.append('Access-Control-Allow-Credentials', 'true');
-
-        fetch(url, {
-            //mode: 'no-cors',
-            credentials: 'include',
-            method: 'GET',
-            headers: headers
-          })
-          .then(response => response.json())
-          .then(json => console.log(json))
-          .catch(error => console.log(error.message));
+        getImageList()
+        getCombinedList()
       }
 
-      async function getImage3() {
-        json.value = await client.get('/api/rgb_get')
-        console.log('json.value :>> ', json.value.data);
-
-      }
-
-      // const express = require('express')
-      // const app = express()
-
-      // const cors = express('cors')
-
-      // app.use(cors())
-      // app.get('/', (req, res) => {
-      //   res.status(200).json({ title: 'Hello worl'})
-      // })
-
-      // getImage()
-      // getImage2()
-      // getImage3()
-      // performSignIn()
-      // console.log('json.value :>> ', json.value);
-      
-      // client.get('/rgb_get')
-
-      
-
+      // getRrquest()
 
       return {
-        dataset
+        dataset,
+        combinedList,
+        fullData,
+        isRealData,
+        fakeData,
       }
     },
     data: () => ({

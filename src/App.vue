@@ -5,7 +5,7 @@
         <div class="sidebar">
           <div class="sidebar__wrapper">
 
-            <img class="sidebar__logo" src="@/assets/junonian-logo.png">
+            <img class="sidebar__logo" src="@/assets/junonian-logo.png" @click="$router.push({path: '/'})">
   
             <div class="sidebar__items">
               <router-link to="/">
@@ -197,6 +197,7 @@ export default {
     width: 127px;
     margin-top: 44px;
     margin-left: 37px;
+    cursor: pointer;
   }
 
   .sidebar__items {
