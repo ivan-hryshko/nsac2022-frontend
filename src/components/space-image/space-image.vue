@@ -20,11 +20,11 @@
 
         </div>
       </div>
-      <div class="space-image__button">
-        <router-link to="/choose-color">
+      <router-link to="/choose-color">
+        <div class="space-image__button">
           Use
-        </router-link>
-      </div>
+        </div>
+      </router-link>
     </div>
   </div>
 </template>
