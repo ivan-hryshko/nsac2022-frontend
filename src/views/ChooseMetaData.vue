@@ -19,14 +19,14 @@
     </div>
     <div class="carousel-wrapped">
       <carousel-3d
-        :height="730"
-        :width="520"
+        :height="626"
+        :width="456"
         :space="400"
         :display="3"
       >
         <slide :index="0" color="red">
-          <div class="image-poster">
-            <div class="image-poster__image-wrapped">
+          <div class="poster-design-template">
+            <div class="image-poster__design-template-wrapped">
               <img
                 class="image-poster__image"
                 src="@/assets/ImageSet/JNCE_2022229_44C00074_V01-mapprojected.png"
@@ -35,34 +35,19 @@
           </div>
         </slide>
         <slide :index="1">
-          <div class="image-poster">
-            <div class="image-poster__image-wrapped">
-              <img
-                class="image-poster__image"
-                src="@/assets/ImageSet/JNCE_2022229_44C00074_V01-blue.png"
-              >
-            </div>
-          </div>
+          <DesignTemplate
+            image-path="design-templates-2.png"
+          />
         </slide>
         <slide :index="2">
-          <div class="image-poster">
-            <div class="image-poster__image-wrapped">
-              <img
-                class="image-poster__image"
-                src="@/assets/ImageSet/JNCE_2022229_44C00074_V01-blue.png"
-              >
-            </div>
-          </div>
+          <DesignTemplate
+            image-path="design-templates-3.png"
+          />
         </slide>
         <slide :index="3">
-          <div class="image-poster">
-            <div class="image-poster__image-wrapped">
-              <img
-                class="image-poster__image"
-                src="@/assets/ImageSet/JNCE_2022229_44C00074_V01-red.png"
-              >
-            </div>
-          </div>
+          <DesignTemplate
+            image-path="design-templates-4.png"
+          />
         </slide>
       </carousel-3d>
     </div>
@@ -71,6 +56,7 @@
 
 <script>
   import { Carousel3d, Slide } from 'vue-carousel-3d';
+  import DesignTemplate from '@/components/design-template';
 
   export default {
     name: 'ChooseMetaData',
@@ -78,6 +64,7 @@
     components: {
       Slide,
       Carousel3d,
+      DesignTemplate,
     },
     setup() {
       return {
@@ -95,7 +82,6 @@
 
   .carousel-wrapped {
     width: 100%;
-
   }
 
   .carousel-3d-slide {
@@ -104,5 +90,4 @@
     display: flex;
     justify-content: center;
   }
-
 </style>

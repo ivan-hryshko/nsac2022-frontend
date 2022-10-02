@@ -291,7 +291,7 @@
     width: 490px;
     background: #000000;
     border-radius: 30px;
-    border: 15px solid #242731;;
+    border: 20px solid #242731;;
   }
 
   .image-poster__image-wrapped {
