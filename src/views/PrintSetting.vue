@@ -93,6 +93,7 @@
 .content__container{
   width: 100%;
   display: flex;
+  margin-bottom: 48px;
 }
 
 .print-mockup {
