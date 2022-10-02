@@ -1,4 +1,6 @@
 <template>
+  <v-app>
+    <v-main>
       <div
         class="layout"
       >
@@ -112,6 +114,8 @@
           </main>
         </div>
       </div>
+    </v-main>
+  </v-app>
 </template>
 
 <script>
