@@ -308,7 +308,7 @@ html {
   .notifications__counter{
     width: 16px;
     height: 16px;
-    background-color: red;
+    background: linear-gradient(0deg, #FF544D 0%, #FF754C 100%);
     border-radius: 50%;
     position: absolute;
     top: 0;
