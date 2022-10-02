@@ -16,39 +16,32 @@
           <div
             class="sidebar__items"
           >
-            <div
-              class="sidebar__item"
-            >
+            <router-link to="/">
               <div
-                class="sidebar__icon"
-              >
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M8.84819 12.314V16.059" stroke="#808191" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                  <path d="M10.7591 14.1867H6.93799" stroke="#808191" stroke-width="1.5" stroke-linecap="round"
-                    stroke-linejoin="round" />
-                  <path d="M15.3661 12.428H15.259" stroke="#808191" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                  <path d="M17.1795 16.0026H17.0725" stroke="#808191" stroke-width="1.5" stroke-linecap="round"
-                    stroke-linejoin="round" />
-                  <path
-                    d="M8.07227 2V2C8.07227 2.74048 8.68475 3.34076 9.44029 3.34076H10.4968C11.6624 3.34492 12.6065 4.27026 12.6118 5.41266V6.08771"
-                    stroke="#808191" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                  <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M16.4283 21.9626C13.4231 22.0135 10.473 22.0114 7.57275 21.9626C4.3535 21.9626 2 19.6664 2 16.5113V11.8617C2 8.70661 4.3535 6.41038 7.57275 6.41038C10.4889 6.36053 13.4411 6.36157 16.4283 6.41038C19.6476 6.41038 22 8.70764 22 11.8617V16.5113C22 19.6664 19.6476 21.9626 16.4283 21.9626Z"
-                    stroke="#808191" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
+                class="sidebar__item">
+                <div class="sidebar__icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.84819 12.314V16.059" stroke="#808191" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M10.7591 14.1867H6.93799" stroke="#808191" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path d="M15.3661 12.428H15.259" stroke="#808191" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M17.1795 16.0026H17.0725" stroke="#808191" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path
+                      d="M8.07227 2V2C8.07227 2.74048 8.68475 3.34076 9.44029 3.34076H10.4968C11.6624 3.34492 12.6065 4.27026 12.6118 5.41266V6.08771"
+                      stroke="#808191" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M16.4283 21.9626C13.4231 22.0135 10.473 22.0114 7.57275 21.9626C4.3535 21.9626 2 19.6664 2 16.5113V11.8617C2 8.70661 4.3535 6.41038 7.57275 6.41038C10.4889 6.36053 13.4411 6.36157 16.4283 6.41038C19.6476 6.41038 22 8.70764 22 11.8617V16.5113C22 19.6664 19.6476 21.9626 16.4283 21.9626Z"
+                      stroke="#808191" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </div>
+                <div class="sidebar__text">
+                  Posters
+                </div>
               </div>
-              <div
-                class="sidebar__text"
-              >
-                Posters
-              </div>
-            </div>
-            <div
-              class="sidebar__item"
-            >
-              <div
-                class="sidebar__icon"
-              >
+            </router-link>
+            <div class="sidebar__item">
+              <div class="sidebar__icon">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M7.24463 14.7815L10.2378 10.8913L13.652 13.5732L16.581 9.79291" stroke="#808191" stroke-width="1.5"
                     stroke-linecap="round" stroke-linejoin="round" />
@@ -59,18 +52,12 @@
                     stroke="#808191" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
               </div>
-              <div
-                class="sidebar__text"
-              >
+              <div class="sidebar__text">
                 About
               </div>
             </div>
-            <div
-              class="sidebar__item"
-            >
-              <div
-                class="sidebar__icon"
-              >
+            <div class="sidebar__item">
+              <div class="sidebar__icon">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="11.5788" cy="6.77803" r="4.77803" stroke="#808191" stroke-width="1.5" stroke-linecap="round"
                     stroke-linejoin="round" />
@@ -79,21 +66,14 @@
                     stroke="#808191" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
               </div>
-              <div
-                class="sidebar__text"
-              >
+              <div class="sidebar__text">
                 NASA Photo
               </div>
             </div>
-            <div
-              class="divider"
-              style="width: 127px"
-            ></div>
+            <div class="divider" style="width: 127px"></div>
           </div>
         </div>
-        <div
-          class="main-part"
-        >
+        <div class="main-part">
           <header class="header">
             <div class="header__download-item">
               <img src="@/assets/icons/download-icon.svg" class="download-item__icon">
@@ -135,79 +115,37 @@ export default {
 </script>
 
 <style>
-/* @import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap'); */
-
-/* @font-face {
-  font-family: TT Firs Neue;
-  src: url(@/fonts/TTFirsNeue-Black.ttf);
-  src: url(@/fonts/TTFirsNeue-Bold.ttf);
-  src: url(@/fonts/TTFirsNeue-DemiBold.ttf);
-  src: url(@/fonts/TTFirsNeue-ExtraBold.ttf);
-  src: url(@/fonts/TTFirsNeue-ExtraLight.ttf);
-  src: url(@/fonts/TTFirsNeue-Light.ttf);
-  src: url(@/fonts/TTFirsNeue-Medium.ttf);
-  src: url(@/fonts/TTFirsNeue-Regular.ttf);
-  src: url(@/fonts/TTFirsNeue-Thin.ttf);
-  
-} */
 
 @font-face {
   font-family: "TTFirsNeue";
-  src: local("TTFirsNeue-Black"), url("./fonts/TTFirsNeue-Black.ttf"),
-    format("truetype");
-  font-weight: 950;
-}
-@font-face {
-  font-family: "TTFirsNeue";
-  src: local("TTFirsNeue-Bold"), url("./fonts/TTFirsNeue-Bold.ttf"),
-    format("truetype");
-  font-weight: 900;
-}
-@font-face {
-  font-family: "TTFirsNeue";
-  src: local("TTFirsNeue-DemiBold"), url("./fonts/TTFirsNeue-DemiBold.ttf"),
-    format("truetype");
-  font-weight: 600;
-}
-@font-face {
-  font-family: "TTFirsNeue";
-  src: local("TTFirsNeue-ExtraBold"), url("./fonts/TTFirsNeue-ExtraBold.ttf"),
-    format("truetype");
-  font-weight: 800;
-}
-@font-face {
-  font-family: "TTFirsNeue";
-  src: local("TTFirsNeue-ExtraLight"), url("./fonts/TTFirsNeue-ExtraLight.ttf"),
-    format("truetype");
-  font-weight: 200;
-}
-@font-face {
-  font-family: "TTFirsNeue";
-  src: local("TTFirsNeue-Light"), url("./fonts/TTFirsNeue-Light.ttf"),
-    format("truetype");
-  font-weight: 300;
-}
-@font-face {
-  font-family: "TTFirsNeue";
-  src: local("TTFirsNeue-Medium"), url("./fonts/TTFirsNeue-Medium.ttf"),
-    format("truetype");
-  font-weight: 500;
-}
-@font-face {
-  font-family: "TTFirsNeue";
-  src: local("TTFirsNeue-Regular"), url("./fonts/TTFirsNeue-Regular.ttf"),
-    format("truetype");
-  font-weight: 400;
-}
-@font-face {
-  font-family: "TTFirsNeue";
-  src: local("TTFirsNeue-Thin"), url("./fonts/TTFirsNeue-Thin.ttf"),
-    format("truetype");
-  font-weight: 100;
+  src: url("./fonts/TTFirsNeue/TTFirsNeue-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
 }
 
-html {
-  font-family: 'TT Firs Neue';
+@font-face {
+  font-family: "TTFirsNeue";
+  src: url("./fonts/TTFirsNeue/TTFirsNeue-Light.ttf") format("truetype");
+  font-weight: light;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TTFirsNeue";
+  src: url("./fonts/TTFirsNeue/TTFirsNeue-Medium.ttf") format("truetype");
+  font-weight: medium;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TTFirsNeue";
+  src: url("./fonts/TTFirsNeue/TTFirsNeue-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: 'TTFirsNeue';
 }
 
 .layout {
@@ -250,6 +188,7 @@ html {
 
   .sidebar__item:hover .sidebar__text{
     color: white;
+    
   }
 
   .sidebar__item:hover path{
@@ -267,6 +206,10 @@ html {
   .sidebar__text {
     margin-left: 18px;
     font-weight: 600;
+    padding-top: 3px;
+    color: #808191;
+    font-size: 14px;
+    line-height: 20px;
   }
 
   .divider {
@@ -325,7 +268,7 @@ html {
   .notifications__counter{
     width: 16px;
     height: 16px;
-    background-color: red;
+    background: linear-gradient(0deg, #FF544D 0%, #FF754C 100%);
     border-radius: 50%;
     position: absolute;
     top: 0;
