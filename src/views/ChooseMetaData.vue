@@ -5,16 +5,16 @@
     <div class="content__header">
       <h2 class="header-title">Step 3. Metadata style</h2>
       <div class="header-btns">
-        <div class="link-button">
-          <router-link to="/choose-color" >
+        <router-link to="/choose-color" >
+          <div class="link-button">
             Back
-          </router-link>
-        </div>
-        <div class="link-button btn-background">
-          <router-link to="/print-setting">
+          </div>
+        </router-link>
+        <router-link to="/print-setting">
+          <div class="link-button btn-background">
             Next
-          </router-link>
-        </div>
+          </div>
+        </router-link>
       </div>
     </div>
     <div class="carousel-wrapped">

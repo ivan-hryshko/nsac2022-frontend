@@ -101,12 +101,12 @@
             <!-- <h2 class="header__poster-size">Poster А2 42x59.4 sm</h2> -->
             <div class="header__notifications">
               <div class="notifications__box">
-                <img src="@/assets/icons/notification.svg" class="notifications__icon">
+                <img src="@/assets/icons/notification.svg">
                 <div class="notifications__counter">
                   <h5 class="counter-number">2</h5>
                 </div>
               </div>
-              <img src="@/assets/icons/avatar.svg" class="notifications__icon">
+              <img src="@/assets/nasa-logo.png" class="notifications__icon">
             </div>
           </header>
           <main>
@@ -336,6 +336,10 @@ html {
     text-align: center;
     align-items: center;
     line-height: 16px;
+  }
+
+  .notifications__icon{
+    height: 55px;
   }
 
   main{

@@ -162,7 +162,8 @@
   }
 
   .btn{
-    border-radius: 16px
+    border-radius: 16px;
+    cursor: pointer;
   }
 
   .btn__text{
