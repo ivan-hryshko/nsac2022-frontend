@@ -61,10 +61,6 @@ export default {
         return {}
       },
     },
-    isRealData: {
-      type: Boolean,
-      default: false,
-    }
   },
   setup(props) {
     function HelloWorld() {
