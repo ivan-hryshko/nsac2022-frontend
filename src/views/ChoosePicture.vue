@@ -195,4 +195,16 @@
     width: 600px;
 
   }
+
+  @media (max-width:1399px)  {
+    .gallery {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width:1000px)  {
+    .gallery {
+      grid-template-columns: 1fr;
+    }
+  }
 </style>
