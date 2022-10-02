@@ -5,11 +5,11 @@
     <div class="content__header">
       <h2 class="header-title">Step 4. Print setting</h2>
       <div class="header-btns">
-        <div class="link-button">
-          <router-link to="/choose-meta-data" >
+        <router-link to="/choose-meta-data" >
+          <div class="link-button">
             Back
-          </router-link>
-        </div>
+          </div>
+        </router-link>
       </div>
     </div>
     <div class="content__container">
@@ -57,11 +57,11 @@
         <div class="file-format-wrapper">
           <!-- <div class="file-format-dropdown">PDF</div> -->
           <v-select :items="items" label="Format" solo :height="56"></v-select>
-          <div class="link-button btn-background" style="height: 56px;">
-            <router-link to="/success-page">
+          <router-link to="/success-page">
+            <div class="link-button btn-background" style="height: 56px;">
               Download poster for printing
-            </router-link>
-          </div>
+            </div>
+          </router-link>
         </div>
       </div>
     </div>

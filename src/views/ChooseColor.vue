@@ -5,16 +5,16 @@
     <div class="content__header">
       <h2 class="header-title">Step 2. Color</h2>
       <div class="header-btns">
-        <div class="link-button">
-          <router-link to="/" >
+        <router-link to="/" >
+          <div class="link-button">
             Back
-          </router-link>
-        </div>
-        <div class="link-button btn-background">
-          <router-link to="/choose-meta-data">
+          </div>
+        </router-link>
+        <router-link to="/choose-meta-data">
+          <div class="link-button btn-background">
             Next
-          </router-link>
-        </div>
+          </div>
+        </router-link>
       </div>
     </div>
     <div class="choose-colors">
