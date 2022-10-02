@@ -180,7 +180,7 @@
     mounted() {
       // console.log('this.$route.query :>> ', this.$route.query);
       console.log('this.$store.state.stateHello :>> ', this.$store.state.helloState);
-
+      this.setChosenImage(this.chosenData.image)
     },
   }
 </script>
