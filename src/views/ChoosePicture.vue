@@ -56,7 +56,6 @@
           }
           // combinedItem.from_images
         }
-        console.log('newArray :>> ', newArray);
         return newArray
       }
     },
@@ -73,17 +72,14 @@
       async getImageList(client) {
         this.imageList = await client.get('/rgb_list')
         this.imageList = this.imageList.data
-        console.log('this.imageList :>> ', this.imageList);
       },
 
       async getCombinedList(client) {
         this.combinedList = await client.get('/combined_list')
         this.combinedList = this.combinedList.data
-        console.log('this.combinedList :>> ', this.combinedList);
       },
     },
     mounted() {
-      
       const url = 'http://44.202.137.22/api'
       const client = axios.create({
         baseURL: url,
@@ -91,7 +87,6 @@
       });
       this.getRequest(client)
       this.saveFullData(this.fullData)
-      console.log('this.$store.state.fullDatas :>> ', this.$store.state.fullDatas);
     }
   }
 </script>

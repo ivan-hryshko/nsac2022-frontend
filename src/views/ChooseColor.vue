@@ -125,12 +125,6 @@
     name: 'ChooseColor',
     components: {
     },
-    setup() {
-      // console.log('this.$route.params :>> ', this.$route.query);
-
-      return {
-      }
-    },
     data: () => ({
       colors: {
         isActiveRed: false,

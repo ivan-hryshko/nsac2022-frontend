@@ -25,12 +25,9 @@ export default new Vuex.Store({
     },
     setTargetElement(state, payload) {
       state.targetRef = payload
-      console.log('save photo');
     },
     setResultPhoto(state, payload) {
-      console.log('payload :>> ', payload);
       state.resultPhoto = payload
-      console.log('save photo');
     },
   },
 
