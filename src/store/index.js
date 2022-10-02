@@ -28,5 +28,8 @@ export default new Vuex.Store({
     getChosenImage(state) {
       return state.chosenImage
     },
+    getChosenData(state) {
+      return state.chosenData
+    },
   }
 })
