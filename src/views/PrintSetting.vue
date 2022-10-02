@@ -55,7 +55,8 @@
         </div>
         <h4 class="print-settings-title">File format</h4>
         <div class="file-format-wrapper">
-          <div class="file-format-dropdown">PDF</div>
+          <!-- <div class="file-format-dropdown">PDF</div> -->
+          <v-select :items="items" label="Format" solo></v-select>
           <div class="file-format-download">Download poster for printing</div>
         </div>
       </div>
@@ -74,8 +75,13 @@
       return {
       }
     },
-    data: () => ({
-    }),
+    data() {
+      return {
+        items: [
+          'PDF', 'JPG', 'PNG', 'TIFF',
+        ],
+      }
+    },
   }
 </script>
 
