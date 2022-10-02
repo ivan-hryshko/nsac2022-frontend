@@ -202,4 +202,25 @@
   justify-content: center;
   align-items: center;
 }
+
+.v-text-field fieldset,
+.v-text-field .v-input__control,
+.v-text-field .v-input__slot{
+  border-radius: 16px;
+  cursor: pointer;
+}
+
+.theme--light.v-input input,
+.theme--light.v-input textarea{
+  cursor: pointer;
+}
+
+.v-input__slot{
+  margin: 0;
+}
+
+.v-text-field.v-text-field--enclosed .v-text-field__details{
+  display: none;
+}
+
 </style>
