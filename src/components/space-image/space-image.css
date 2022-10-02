@@ -45,3 +45,20 @@
   
   color: #808191;
 }
+
+.space-image__button{
+  height: 56px;
+  width: 102px;
+  background: #702DFF;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.v-application a{
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+}

@@ -20,13 +20,11 @@
 
         </div>
       </div>
-      <v-btn
-        color="#702DFF"
-      >
+      <div class="space-image__button">
         <router-link to="/choose-color">
           Use
         </router-link>
-      </v-btn>
+      </div>
     </div>
   </div>
 </template>
