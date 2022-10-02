@@ -136,23 +136,23 @@
       function changeActive(color) {
         for (const key in colors.value) {
           colors.value[key] = false
-          if (color === 'blue') {
-            colors.value.isActiveBlue = true
-            imagePath.value = 'JNCE_2022229_44C00074_V01-blue.png'
-          }
-          if (color === 'red') {
-            colors.value.isActiveRed = true
-            imagePath.value = 'JNCE_2022229_44C00074_V01-red.png'
-          }
-          if (color === 'green') {
-            colors.value.isActiveGreen = true
-            imagePath.value = 'JNCE_2022229_44C00074_V01-green.png'
-          }
-          if (color === 'white') {
-            colors.value.isActiveNormal = true
-            imagePath.value = 'JNCE_2022229_44C00074_V01-mapprojected.png'
-          }
+        }
 
+        if (color === 'blue') {
+          colors.value.isActiveBlue = true
+          imagePath.value = 'JNCE_2022229_44C00074_V01-blue.png'
+        }
+        if (color === 'red') {
+          colors.value.isActiveRed = true
+          imagePath.value = 'JNCE_2022229_44C00074_V01-red.png'
+        }
+        if (color === 'green') {
+          colors.value.isActiveGreen = true
+          imagePath.value = 'JNCE_2022229_44C00074_V01-green.png'
+        }
+        if (color === 'white') {
+          colors.value.isActiveNormal = true
+          imagePath.value = 'JNCE_2022229_44C00074_V01-mapprojected.png'
         }
       }
 
