@@ -25,9 +25,7 @@
         :display="3"
       >
         <slide :index="0" color="red">
-          <DesignTemplate1
-            image-path="JNCE_2022229_44C00074_V01-mapprojected.png"
-          />
+          <DesignTemplate1 />
         </slide>
         <slide :index="1">
           <DesignTemplate

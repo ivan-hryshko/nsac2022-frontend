@@ -3,7 +3,7 @@
     <div class="image-poster__design-template-wrapped image-poster__background">
       <img
         class="image-poster__image"
-        :src="require(`@/assets/ImageSet/${imagePath}`)"
+        :src="chosenImage"
       >
       <div class="image-poster__template-top">
         <div class="image-poster__template-header">
@@ -15,7 +15,7 @@
               <li class="template-header__list-item">"INSTRUMENT_HOST_NAME": "JUNO",</li>
               <li class="template-header__list-item">"INSTRUMENT_ID": "JNC"</li>
             </ul>
-            <img src="../../assets/nasa-logo.png" class="template-header__logo">
+            <img src="@/assets/nasa-logo.png" class="template-header__logo">
           </div>
         </div>
       </div>
@@ -31,7 +31,7 @@
               <li class="template-footer__list-item">"FILE_RECORDS": 10752,</li>
               <li class="template-footer__list-item">"FILTER_NAME": ["BLUE", "GREEN", "RED"]</li>
             </ul>
-            <img src="../../assets/solar.png" class="template-footer__pic">
+            <img src="@/assets/solar.png" class="template-footer__pic">
           </div>
         </div>
       </div>
@@ -40,6 +40,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
 
 export default {
   name: 'DesignTemplate1',
@@ -48,6 +49,11 @@ export default {
       type: String,
       default: 'design-templates-2.png',
     },
+  },
+  computed: {
+    ...mapGetters({
+      chosenImage: 'getChosenImage',
+    })
   },
   setup(props) {
     return {

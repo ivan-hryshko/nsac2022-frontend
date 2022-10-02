@@ -13,14 +13,20 @@ export default new Vuex.Store({
   },
 
   mutations: {
-    saveFullData (state, payload) {
+    saveFullData(state, payload) {
       state.fullDatas = payload
     },
-    setChosenData (state, payload) {
+    setChosenData(state, payload) {
       state.chosenData = payload
     },
-    setChosenImage (state, payload) {
+    setChosenImage(state, payload) {
       state.chosenImage = payload
+    },
+  },
+
+  getters: {
+    getChosenImage(state) {
+      return state.chosenImage
     },
   }
 })
