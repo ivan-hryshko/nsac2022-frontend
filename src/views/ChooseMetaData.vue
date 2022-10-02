@@ -17,9 +17,6 @@
         </router-link>
       </div>
     </div>
-    {{ $route.query }}
-
-
     <div class="carousel-wrapped">
       <carousel-3d
         :height="626"
