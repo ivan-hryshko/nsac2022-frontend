@@ -101,6 +101,8 @@
   .carousel-3d-slide {
     background-color: transparent !important;
     border-color: transparent !important;
+    display: flex;
+    justify-content: center;
   }
 
 </style>
