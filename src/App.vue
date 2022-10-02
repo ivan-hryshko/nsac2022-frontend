@@ -153,7 +153,7 @@ export default {
 
   .sidebar__logo {
     width: 127px;
-    margin-top: 32px;
+    margin-top: 44px;
     margin-left: 37px;
   }
 
