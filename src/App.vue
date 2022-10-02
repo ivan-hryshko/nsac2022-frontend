@@ -206,7 +206,7 @@ export default {
   }
 
   .header{
-    height: 112px;
+    height: 72px;
     width: 100%;
     display: flex;
     justify-content: space-between;
