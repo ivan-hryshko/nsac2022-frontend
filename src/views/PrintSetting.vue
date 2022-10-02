@@ -3,7 +3,7 @@
     class="main-content"
   >
     <div class="content__header">
-      <h2 class="header-title">Step 4. Print setting</h2>
+      <h2 class="header-title">Step 4. Print settings</h2>
       <div class="header-btns">
         <router-link to="/choose-meta-data" >
           <div class="link-button">
@@ -13,7 +13,7 @@
       </div>
     </div>
     <div class="content__container">
-      <img src="@/assets/mockup.png" alt="" class="print-mockup">
+      <img src="@/assets/mockup.jpg" alt="" class="print-mockup">
       <div class="print-settings">
         <h4 class="print-settings-title">Size</h4>
         <div class="size-buttons">
