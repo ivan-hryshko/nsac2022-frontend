@@ -140,7 +140,7 @@
 <style>
 .main-content {
     /* width: 100%; */
-    margin: 0 64px;
+    padding: 0 64px;
     display: flex;
     flex-direction: column;
     align-items: center;

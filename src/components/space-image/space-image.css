@@ -50,11 +50,18 @@
   height: 56px;
   width: 102px;
   background: #702DFF;
+  border: 1px solid #702DFF;
   border-radius: 16px;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+}
+
+.space-image__button:hover {
+  border: 1px solid #5c2bc6;
+  background-color: #5c2bc6;
+  transition: all .3s;
 }
 
 .v-application a{
