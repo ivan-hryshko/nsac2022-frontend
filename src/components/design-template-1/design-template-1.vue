@@ -2,7 +2,7 @@
   <div class="poster-design-template__background">
     <div class="image-poster__design-template-wrapped image-poster__background">
       <img
-        class="image-poster__image"
+        class="image-poster__image image-position"
         :src="chosenImage"
       >
       <div class="image-poster__template-top">
