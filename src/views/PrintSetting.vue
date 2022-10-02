@@ -56,8 +56,12 @@
         <h4 class="print-settings-title">File format</h4>
         <div class="file-format-wrapper">
           <!-- <div class="file-format-dropdown">PDF</div> -->
-          <v-select :items="items" label="Format" solo></v-select>
-          <div class="file-format-download">Download poster for printing</div>
+          <v-select :items="items" label="Format" solo :height="56"></v-select>
+          <div class="link-button btn-background" style="height: 56px;">
+            <router-link to="/success-page">
+              Download poster for printing
+            </router-link>
+          </div>
         </div>
       </div>
     </div>
@@ -185,5 +189,17 @@
   line-height: 18px;
   color: #808191;
   text-align: center;
+}
+
+.file-format-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+}
+
+.link-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 </style>
