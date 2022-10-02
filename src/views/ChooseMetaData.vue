@@ -25,14 +25,9 @@
         :display="3"
       >
         <slide :index="0" color="red">
-          <div class="poster-design-template">
-            <div class="image-poster__design-template-wrapped">
-              <img
-                class="image-poster__image"
-                src="@/assets/ImageSet/JNCE_2022229_44C00074_V01-mapprojected.png"
-              >
-            </div>
-          </div>
+          <DesignTemplate1
+            image-path="JNCE_2022229_44C00074_V01-mapprojected.png"
+          />
         </slide>
         <slide :index="1">
           <DesignTemplate
@@ -57,6 +52,7 @@
 <script>
   import { Carousel3d, Slide } from 'vue-carousel-3d';
   import DesignTemplate from '@/components/design-template';
+  import DesignTemplate1 from '@/components/design-template-1';
 
   export default {
     name: 'ChooseMetaData',
@@ -65,6 +61,7 @@
       Slide,
       Carousel3d,
       DesignTemplate,
+      DesignTemplate1,
     },
     setup() {
       return {
